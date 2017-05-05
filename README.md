@@ -1,5 +1,7 @@
 # react-github-calendar
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/axetroy/react-github-calendar.svg)](https://greenkeeper.io/)
+
 [github-calendar](https://github.com/IonicaBizau/github-calendar) wrapper component for react
 
 ## Install
