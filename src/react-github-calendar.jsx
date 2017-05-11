@@ -4,9 +4,12 @@ import GitHubCalendar from 'github-calendar';
 import './style.css';
 
 export default class ReactGithubCalendar extends Component {
-  PropTypes = {
-    name: PropTypes.string
+  static PropTypes = {
+    name: PropTypes.string.required
   };
+  componentDidMount() {
+    GitHubCalendar(this.refs.container, this.props.name);
+  }
   render() {
     return (
       <div
@@ -14,9 +17,7 @@ export default class ReactGithubCalendar extends Component {
           'calendar' + (this.props.className ? ' ' + this.props.className : '')
         }
         {...this.props}
-        ref={dom => {
-          GitHubCalendar(dom, this.props.name);
-        }}
+        ref="container"
       />
     );
   }
