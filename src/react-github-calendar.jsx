@@ -1,5 +1,6 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import GitHubCalendar from 'github-calendar';
+import PropTypes from 'proptypes';
 
 import './style.css';
 

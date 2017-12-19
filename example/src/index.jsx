@@ -6,7 +6,6 @@ const element = document.createElement('div');
 document.body.appendChild(element);
 render(
   <div>
-    hello world
     <ReactGithubCalendar name="axetroy" />
   </div>,
   element
