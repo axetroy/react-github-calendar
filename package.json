@@ -1,6 +1,6 @@
 {
   "name": "@axetroy/react-github-calendar",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "description": "github-calendar wrapper component for react",
   "main": "index.js",
   "scripts": {
