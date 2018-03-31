@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import GitHubCalendar from 'github-calendar';
-import PropTypes from 'proptypes';
+import PropTypes from 'prop-types';
 
 import './style.css';
 
 export default class ReactGithubCalendar extends Component {
-  static PropTypes = {
-    name: PropTypes.string.required
+  static propTypes = {
+    name: PropTypes.string.isRequired
   };
   componentDidMount() {
     GitHubCalendar(this.refs.container, this.props.name);

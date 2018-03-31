@@ -1,36 +1,36 @@
-const path = require('path');
-const webpack = require('webpack');
+const path = require("path");
+const webpack = require("webpack");
 
 module.exports = {
-  entry: path.join(__dirname, 'src', 'react-github-calendar.jsx'),
+  entry: path.join(__dirname, "src", "react-github-calendar.jsx"),
   output: {
-    path: path.join(__dirname, 'lib'),
-    filename: 'react-github-calendar.js',
-    libraryTarget: 'umd'
+    path: path.join(__dirname, "lib"),
+    filename: "react-github-calendar.js",
+    libraryTarget: "umd"
   },
   externals: {
-    react: 'react',
-    proptypes: 'proptypes'
+    react: "react",
+    "prop-types": "prop-types"
   },
   module: {
     loaders: [
       {
         test: /\.(jsx|js)?$/,
-        loader: 'babel-loader',
+        loader: "babel-loader",
         exclude: /(node_modules|bower_components)/
       },
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader']
+        use: ["style-loader", "css-loader"]
       }
     ]
   },
   devServer: {
-    contentBase: path.join(__dirname, 'example')
+    contentBase: path.join(__dirname, "example")
   },
   plugins: [
     new webpack.DefinePlugin({
-      'process.env.NODE_ENV': '"production"'
+      "process.env.NODE_ENV": '"production"'
     })
   ]
 };
